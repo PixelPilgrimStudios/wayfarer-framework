@@ -8,7 +8,7 @@ From Prototypes to Game Jams and Full Releases use this framework to get up and 
 
 - Highly customizable
 - Use only what you need
-- Want to support the project and get a license (and remove the attribution logo) it's only $5
+- Want to support the project? consider getting a license (and remove the attribution logo) starting at $5
 
 Includes mobile support, localization, settings management, dev tools, and UI systems out of the box.
 
