@@ -11,6 +11,7 @@ var previous_scene := ""
 
 
 func _ready() -> void:
+    check_for_touch_flag()
     load_settings()
 
 
@@ -35,3 +36,10 @@ func load_settings() -> void:
     var path = "res://translations/%s.tres" % locale
     if ResourceLoader.exists(path):
         LocalizationManager.load_translation(path)
+
+func check_for_touch_flag():
+    var args = OS.get_cmdline_args()
+    if "--touch" in args:
+        print("..:: Touch mode enabled via --touch flag")
+        touch_controls_enabled = true
+        save()

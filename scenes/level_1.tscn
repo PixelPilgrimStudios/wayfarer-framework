@@ -25,3 +25,4 @@ shape = SubResource("WorldBoundaryShape2D_5xbjy")
 visible = false
 
 [node name="TouchControls" parent="." instance=ExtResource("1_6ovph")]
+visible = false

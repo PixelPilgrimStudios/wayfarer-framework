@@ -44,20 +44,25 @@ func _on_input_submitted(command: String) -> void:
             SettingsManager.touch_controls_enabled = true
             SettingsManager.save()
             output.text += "\n🖲 Touch Controls enabled."
-            if has_node("/root/TouchControls"):
-                $"/root/TouchControls".refresh()
+            var touch_controls = get_tree().get_root().find_child("TouchControls", true, false)
+            if touch_controls:
+              touch_controls.refresh()
         "touch_controls off":
             SettingsManager.touch_controls_enabled = false
             SettingsManager.save()
             output.text += "\n🖲 Touch Controls disabled."
-            if has_node("/root/TouchControls"):
-                $"/root/TouchControls".refresh()
+            var touch_controls = get_tree().get_root().find_child("TouchControls", true, false)
+            if touch_controls:
+              touch_controls.refresh()
         "touch_controls toggle":
             SettingsManager.touch_controls_enabled = !SettingsManager.touch_controls_enabled
             SettingsManager.save()
             output.text += "\n🖲 Touch Controls toggled to: " + str(SettingsManager.touch_controls_enabled)
-            if has_node("/root/TouchControls"):
-                $"/root/TouchControls".refresh()
+            var touch_controls = get_tree().get_root().find_child("TouchControls", true, false)
+            if touch_controls:
+              touch_controls.refresh()
+        "touch_controls status":
+            output.text += "\n📱 Touch Controls: " + ("ON" if SettingsManager.touch_controls_enabled else "OFF")
         _:
             output.text += "\nUnknown command"
     input.text = ""

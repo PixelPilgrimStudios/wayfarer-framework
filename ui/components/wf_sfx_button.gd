@@ -3,7 +3,6 @@
 
 class_name WFSfxButton
 extends Button
-## Custom Button that includes Hover and Click Sfx
 
 var click_sfx = preload("res://assets/sounds/select.ogg")
 var hover_sfx = preload("res://assets/sounds/hover.ogg")

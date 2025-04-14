@@ -1,0 +1,51 @@
+# Wayfarer Framework – Changelog
+
+All notable changes to this project will be documented in this file.
+
+This project adheres to [Semantic Versioning](https://semver.org/).
+
+---
+
+## [1.0.1] – 2025-04-14
+
+### Fixed
+- Runtime toggle for touch controls now works properly via `SettingsManager.touch_controls_enabled`
+- Removed reliance on `DisplayServer.is_touchscreen_available()` which was always `true` due to "Emulate Touch From Mouse"
+- `TouchScreenButton` input is now suppressed by clearing `.action` on disable
+- Fixed bug where `OptionsMenu` threw signal duplication error (now guards `.connect()` call)
+
+### Added
+- `--touch` command-line flag to enable touch controls at startup
+- Dev console commands:
+  - `touch_controls on`
+  - `touch_controls off`
+  - `touch_controls status`
+- Touch support documented in `README.md`
+
+---
+
+## [1.0.0] – 2025-04-13
+
+Initial release of the Wayfarer Framework.
+
+### Features
+- Studio splash screen and audio intro
+- Player-ready input system with keyboard, mouse, and touch support
+- AudioManager for volume control + global bus routing
+- Full localization system with dynamic `.tres` generation
+- Dev console with runtime commands
+- Pause system with integrated options menu
+- TouchControls scene with runtime toggle support
+- Credits screen with localized multiline text
+- SceneLoader for smooth transitions with fade animation
+- Translation Editor plugin with built-in preview and flag icons
+- Kenney assets and fallback UI theme
+
+---
+
+## Planned
+- Save system
+- Scene transitions with load progress
+- Mobile-first UI presets
+- Dialogue and cutscene modules
+- Level manager and checkpoint system

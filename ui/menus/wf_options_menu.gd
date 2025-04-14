@@ -20,8 +20,11 @@ var locale_map = {
 
 func _ready() -> void:
     is_popup = get_tree().current_scene != self
+    if is_popup:
+       $".".set_anchors_preset(Control.PRESET_FULL_RECT, false)
     refresh_translations()
-    back_button.pressed.connect(_on_back_pressed)
+    if not back_button.is_connected("pressed", Callable(self, "_on_back_pressed")):
+        back_button.pressed.connect(_on_back_pressed)
     volume_slider.value = SettingsManager.volume
     language_selector.clear()
     language_selector.add_item(tr("English"), 0)

@@ -73,6 +73,32 @@ OptionsMenu works as both:
 Options shown as a dimmed overlay when accessed from pause
 Background UI is deactivated and visually separated
 
+## Touch Controls
+
+Supports on-screen touch controls for mobile devices, and includes a flexible runtime toggle for testing on desktop.
+
+### Enable Touch Controls
+
+- On real touch devices (Android/iOS), controls appear automatically.
+- In the editor or desktop builds, use the `--touch` command-line flag or the dev console.
+
+### Dev Console Commands
+
+You can enable or disable touch controls during play using:
+
+```
+touch_controls on # shows touch UI
+touch_controls off # hides touch UI
+touch_controls status # prints current state
+```
+These settings are saved to `user://settings.cfg`.
+
+> Project Settings Note
+>
+> If "Emulate Touch From Mouse" is enabled in Project Settings, Godot may incorrectly report touch availability on desktop.
+> Wayfarer safely overrides this with its own logic.
+
+
 ---
 
 ## Getting Started
@@ -107,9 +133,9 @@ reset_settings
 /autoload          → SettingsManager, LocalizationManager
 /translations      → .tres files per language
 /addons            → In-editor translation tool
-/debug             → In-editor translation tool
-/assets            → In-editor translation tool
-/scenes            → In-editor translation tool
+/debug             → extend your dev console here!
+/assets            → fonts, music, sounds, and images
+/scenes            → Your game scenes go here
 ```
 
 ### Want to remove the Wayfarer Framework splash screen?
