@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://sdee1s7k23kv"]
+
+[ext_resource type="Script" uid="uid://dha6i1en6hxfs" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://d1lcptpbk42lb" path="res://debug/wf_dev_tools.gd" id="1_ig7tw"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0xm2m")
+
+[node name="DevTools" type="Node" parent="."]
+script = ExtResource("1_ig7tw")

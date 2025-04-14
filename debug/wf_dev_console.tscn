@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxe57v0kf83aa"]
+
+[ext_resource type="Script" uid="uid://cu5xxkr3sr0vb" path="res://debug/wf_dev_console.gd" id="1_4j6j6"]
+
+[node name="DevConsole" type="CanvasLayer"]
+script = ExtResource("1_4j6j6")
+
+[node name="OutputLabel" type="Label" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 645.0
+grow_horizontal = 2
+
+[node name="LineEdit" type="LineEdit" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 649.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+keep_editing_on_text_submit = true
+clear_button_enabled = true

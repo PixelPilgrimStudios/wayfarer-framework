@@ -1,0 +1,16 @@
+[gd_resource type="Translation" format=3 uid="uid://c2rx3rx7g67jb"]
+
+[resource]
+messages = {
+&"back": &"Back",
+&"credits": &"Credits",
+&"credits_text": &"Pixel Pilgrim Studios\\n\\nGame Design: Abraham Cuenca\\nProgramming: Abraham Cuenca\\nArt & Assets: Abraham Cuenca\\nLocalization: Abraham Cuenca\\n\\nPowered by Godot Engine",
+&"language": &"Language",
+&"options": &"Options",
+&"paused": &"Paused",
+&"quit": &"Quit",
+&"quit_to_menu": &"Quit to Menu",
+&"resume": &"Resume",
+&"start_game": &"Start Game",
+&"volume": &"Volume"
+}

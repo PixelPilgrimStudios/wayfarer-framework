@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://hprhngj3sdwe"]
+
+[ext_resource type="Script" uid="uid://f6twgs16ollf" path="res://ui/menus/wf_pause_menu.gd" id="1_2x0uo"]
+[ext_resource type="PackedScene" uid="uid://dphyxvmivw63k" path="res://ui/menus/wf_options_menu.tscn" id="2_t1dp6"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_2x0uo")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -29.5
+offset_right = 4.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="OptionsButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="OptionsMenu" parent="." instance=ExtResource("2_t1dp6")]
+offset_right = 0.0
+offset_bottom = 0.0

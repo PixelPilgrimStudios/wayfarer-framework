@@ -1,0 +1,17 @@
+[gd_resource type="Translation" format=3 uid="uid://dytpu5p47c0wx"]
+
+[resource]
+messages = {
+&"back": &"返回",
+&"credits": &"制作人员",
+&"credits_text": &"Pixel Pilgrim Studios\\n\\n游戏设计：Abraham Cuenca\\n编程：Abraham Cuenca\\n美术资源：Abraham Cuenca\\n本地化：Abraham Cuenca\\n\\n由 Godot 引擎驱动",
+&"language": &"语言",
+&"options": &"选项",
+&"paused": &"已暂停",
+&"quit": &"退出",
+&"quit_to_menu": &"返回菜单",
+&"resume": &"继续",
+&"start_game": &"开始游戏",
+&"volume": &"音量"
+}
+locale = "zh_CN"

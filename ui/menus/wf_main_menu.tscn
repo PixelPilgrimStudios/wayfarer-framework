@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4cpsppdxqleq"]
+
+[ext_resource type="Script" uid="uid://bxiuylusywm4l" path="res://ui/menus/wf_main_menu.gd" id="1_xabr4"]
+[ext_resource type="Script" uid="uid://cg3rob6c7y7fw" path="res://ui/components/wf_sfx_button.gd" id="2_bdoa0"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xabr4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -22.0
+offset_right = 20.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+script = ExtResource("2_bdoa0")
+metadata/_custom_type_script = "uid://cg3rob6c7y7fw"
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+script = ExtResource("2_bdoa0")
+metadata/_custom_type_script = "uid://cg3rob6c7y7fw"
+
+[node name="CreditsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+script = ExtResource("2_bdoa0")
+metadata/_custom_type_script = "uid://cg3rob6c7y7fw"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+script = ExtResource("2_bdoa0")
+metadata/_custom_type_script = "uid://cg3rob6c7y7fw"
+
+[connection signal="mouse_entered" from="VBoxContainer/StartButton" to="." method="_on_start_button_mouse_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_mouse_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_mouse_entered"]
+[connection signal="mouse_entered" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_mouse_entered"]

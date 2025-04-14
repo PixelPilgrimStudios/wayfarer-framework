@@ -1,0 +1,17 @@
+[gd_resource type="Translation" format=3 uid="uid://jchr7x2bxtav"]
+
+[resource]
+messages = {
+&"back": &"Voltar",
+&"credits": &"Créditos",
+&"credits_text": &"Pixel Pilgrim Studios\\n\\nDesign do Jogo: Abraham Cuenca\\nProgramação: Abraham Cuenca\\nArte e Recursos: Abraham Cuenca\\nLocalização: Abraham Cuenca\\n\\nDesenvolvido com Godot Engine",
+&"language": &"Idioma",
+&"options": &"Opções",
+&"paused": &"Pausado",
+&"quit": &"Sair",
+&"quit_to_menu": &"Sair para o menu",
+&"resume": &"Continuar",
+&"start_game": &"Iniciar Jogo",
+&"volume": &"Volume"
+}
+locale = "pt_BR"

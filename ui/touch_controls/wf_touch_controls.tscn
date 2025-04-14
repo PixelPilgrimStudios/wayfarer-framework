@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=3 uid="uid://s103xextcax0"]
+
+[ext_resource type="Texture2D" uid="uid://g8lq3yadu88c" path="res://assets/kenney/tilemap_white.png" id="1_8odx3"]
+[ext_resource type="Script" uid="uid://b23vyahxdmi23" path="res://ui/touch_controls/wf_touch_controls.gd" id="1_nmp10"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nmp10"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5g018"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j4axu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_poyuq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yfbj5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhd0l"]
+
+[node name="TouchControls" type="CanvasLayer"]
+script = ExtResource("1_nmp10")
+
+[node name="LeftStick" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 120.0
+offset_top = 551.0
+offset_right = 120.0
+offset_bottom = 551.0
+scale = Vector2(10, 10)
+
+[node name="Sprite2D" type="Sprite2D" parent="LeftStick"]
+texture_filter = 1
+texture = ExtResource("1_8odx3")
+region_enabled = true
+region_rect = Rect2(0, 34, 16, 16)
+
+[node name="UpButton" type="TouchScreenButton" parent="LeftStick"]
+position = Vector2(0, -5.8)
+scale = Vector2(0.45, 0.45)
+shape = SubResource("CircleShape2D_nmp10")
+
+[node name="DownButton" type="TouchScreenButton" parent="LeftStick"]
+position = Vector2(1.49012e-08, 4.6)
+scale = Vector2(0.45, 0.45)
+shape = SubResource("CircleShape2D_5g018")
+
+[node name="LeftButton" type="TouchScreenButton" parent="LeftStick"]
+position = Vector2(-7.3, -0.5)
+scale = Vector2(0.45, 0.45)
+shape = SubResource("CircleShape2D_j4axu")
+
+[node name="RightButton" type="TouchScreenButton" parent="LeftStick"]
+position = Vector2(7.6, -0.4)
+scale = Vector2(0.45, 0.45)
+shape = SubResource("CircleShape2D_poyuq")
+
+[node name="AButton" type="TouchScreenButton" parent="."]
+position = Vector2(917, 551)
+scale = Vector2(8, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="AButton"]
+texture_filter = 1
+texture = ExtResource("1_8odx3")
+region_enabled = true
+region_rect = Rect2(68, 0, 16, 16)
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="AButton"]
+scale = Vector2(0.75, 0.793)
+shape = SubResource("CircleShape2D_yfbj5")
+
+[node name="BButton" type="TouchScreenButton" parent="."]
+position = Vector2(1079, 551)
+scale = Vector2(8, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="BButton"]
+texture_filter = 1
+texture = ExtResource("1_8odx3")
+region_enabled = true
+region_rect = Rect2(85, 0, 16, 16)
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="BButton"]
+scale = Vector2(0.75, 0.75)
+shape = SubResource("CircleShape2D_qhd0l")

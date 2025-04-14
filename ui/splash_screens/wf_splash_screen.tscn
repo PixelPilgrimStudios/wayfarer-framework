@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsf7bjwwhi227"]
+
+[ext_resource type="Script" uid="uid://comb52iuqalwa" path="res://ui/splash_screens/wf_splash_screen.gd" id="1_l2g8s"]
+[ext_resource type="Texture2D" uid="uid://c0rulul0p8wlx" path="res://wayfarer-framework.png" id="2_f4hhf"]
+
+[node name="WFSplashScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l2g8s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+use_top_left = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer"]
+texture = ExtResource("2_f4hhf")

@@ -1,0 +1,133 @@
+[gd_scene load_steps=16 format=3 uid="uid://cj0vhvbtpkugy"]
+
+[ext_resource type="Script" uid="uid://bnong0bpf63iw" path="res://ui/splash_screens/studio_splash_screen.gd" id="1_spfjp"]
+[ext_resource type="Texture2D" uid="uid://cw21h7kl8jeyn" path="res://assets/pixel_pilgrim_studios/pixelpilgrimstudios.png" id="2_68uyy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2g8s"]
+atlas = ExtResource("2_68uyy")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc2kg"]
+atlas = ExtResource("2_68uyy")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7gka"]
+atlas = ExtResource("2_68uyy")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8jxw"]
+atlas = ExtResource("2_68uyy")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3ux5"]
+atlas = ExtResource("2_68uyy")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_py0ck"]
+atlas = ExtResource("2_68uyy")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfd1e"]
+atlas = ExtResource("2_68uyy")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vi2wv"]
+atlas = ExtResource("2_68uyy")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpoh2"]
+atlas = ExtResource("2_68uyy")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gk24h"]
+atlas = ExtResource("2_68uyy")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8esyr"]
+atlas = ExtResource("2_68uyy")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ls41"]
+atlas = ExtResource("2_68uyy")
+region = Rect2(1408, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6p5fv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2g8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rc2kg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7gka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8jxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3ux5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_py0ck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfd1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vi2wv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpoh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gk24h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8esyr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ls41")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="SplashScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_spfjp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+use_top_left = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CenterContainer"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_6p5fv")
+frame = 11
+frame_progress = 1.0

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwfkqni8py63t"]
+
+[ext_resource type="Script" uid="uid://cg3rob6c7y7fw" path="res://ui/components/wf_sfx_button.gd" id="1_lj54e"]
+
+[node name="SfxButton" type="Button"]
+script = ExtResource("1_lj54e")

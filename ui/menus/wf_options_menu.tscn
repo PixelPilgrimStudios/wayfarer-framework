@@ -1,0 +1,74 @@
+[gd_scene load_steps=3 format=3 uid="uid://dphyxvmivw63k"]
+
+[ext_resource type="Script" uid="uid://xurcba2lvgdm" path="res://ui/menus/wf_options_menu.gd" id="1_hxbov"]
+[ext_resource type="Script" uid="uid://cg3rob6c7y7fw" path="res://ui/components/wf_sfx_button.gd" id="2_1xqpy"]
+
+[node name="OptionsMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_hxbov")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.94902)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -44.5
+offset_right = 20.0
+offset_bottom = 44.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="VolumeLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VolumeSlider" type="HSlider" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="LanguageLabel" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="LanguageSelector" type="OptionButton" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+script = ExtResource("2_1xqpy")
+metadata/_custom_type_script = "uid://cg3rob6c7y7fw"
+
+[connection signal="value_changed" from="VBoxContainer/HBoxContainer/VolumeSlider" to="." method="_on_volume_changed"]
+[connection signal="item_selected" from="VBoxContainer/HBoxContainer2/LanguageSelector" to="." method="_on_language_changed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_pressed"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://biptbrgrj32jd"]
+
+[ext_resource type="PackedScene" uid="uid://s103xextcax0" path="res://ui/touch_controls/wf_touch_controls.tscn" id="1_6ovph"]
+[ext_resource type="PackedScene" uid="uid://bj3jf6fo83ma" path="res://scenes/player.tscn" id="1_rus8k"]
+[ext_resource type="PackedScene" uid="uid://hprhngj3sdwe" path="res://ui/menus/wf_pause_menu.tscn" id="2_bwv4p"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rus8k"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5xbjy"]
+normal = Vector2(-0.00471693, -0.999989)
+
+[node name="Level1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_rus8k")]
+position = Vector2(62, 0)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(637, 442)
+physics_material_override = SubResource("PhysicsMaterial_rus8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("WorldBoundaryShape2D_5xbjy")
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_bwv4p")]
+visible = false
+
+[node name="TouchControls" parent="." instance=ExtResource("1_6ovph")]

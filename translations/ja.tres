@@ -1,0 +1,17 @@
+[gd_resource type="Translation" format=3 uid="uid://v3u8cnshyvx5"]
+
+[resource]
+messages = {
+&"back": &"戻る",
+&"credits": &"クレジット",
+&"credits_text": &"Pixel Pilgrim Studios\\n\\nゲームデザイン：Abraham Cuenca\\nプログラミング：Abraham Cuenca\\nアートと素材：Abraham Cuenca\\nローカライズ：Abraham Cuenca\\n\\nGodot Engine によって制作",
+&"language": &"言語",
+&"options": &"オプション",
+&"paused": &"一時停止中",
+&"quit": &"終了",
+&"quit_to_menu": &"メニューに戻る",
+&"resume": &"再開",
+&"start_game": &"ゲーム開始",
+&"volume": &"音量"
+}
+locale = "ja"

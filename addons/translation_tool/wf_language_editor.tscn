@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://bkejuviby3hvo"]
+
+[ext_resource type="Script" uid="uid://d38j3g6ckqprq" path="res://addons/translation_tool/wf_language_editor.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://ckpnakkwdmg4a" path="res://addons/translation_tool/flags/us.png" id="2_nx5qs"]
+[ext_resource type="Texture2D" uid="uid://dr0b8l5w84pcs" path="res://addons/translation_tool/flags/es.png" id="3_0waci"]
+[ext_resource type="Texture2D" uid="uid://dd2gvux7bavyb" path="res://addons/translation_tool/flags/de.png" id="4_yk284"]
+[ext_resource type="Texture2D" uid="uid://f4l16xxiy6ae" path="res://addons/translation_tool/flags/fr.png" id="5_i407l"]
+[ext_resource type="Texture2D" uid="uid://da3k6iub4t7wu" path="res://addons/translation_tool/flags/pt.png" id="6_pbouo"]
+[ext_resource type="Texture2D" uid="uid://dbm1cxfegubhf" path="res://addons/translation_tool/flags/cn.png" id="7_nqvln"]
+[ext_resource type="Texture2D" uid="uid://ms6pdmn5o7o7" path="res://addons/translation_tool/flags/jp.png" id="8_5pebq"]
+
+[node name="LanguageEditor" type="PopupPanel"]
+title = "Translations Editor"
+size = Vector2i(1152, 650)
+visible = true
+script = ExtResource("1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(400, 300)
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 1148.0
+offset_bottom = 646.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Translation Languages"
+horizontal_alignment = 1
+
+[node name="LocaleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Editing: en"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+follow_focus = true
+
+[node name="TranslationList" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Languages" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="English" type="TextureButton" parent="VBoxContainer/Languages"]
+layout_mode = 2
+tooltip_text = "English"
+texture_normal = ExtResource("2_nx5qs")
+stretch_mode = 0
+
+[node name="Spanish" type="TextureButton" parent="VBoxContainer/Languages"]
+layout_mode = 2
+tooltip_text = "Español"
+texture_normal = ExtResource("3_0waci")
+stretch_mode = 0
+
+[node name="German" type="TextureButton" parent="VBoxContainer/Languages"]
+layout_mode = 2
+tooltip_text = "Español"
+texture_normal = ExtResource("4_yk284")
+stretch_mode = 0
+
+[node name="French" type="TextureButton" parent="VBoxContainer/Languages"]
+layout_mode = 2
+tooltip_text = "Español"
+texture_normal = ExtResource("5_i407l")
+stretch_mode = 0
+
+[node name="Portuguese" type="TextureButton" parent="VBoxContainer/Languages"]
+layout_mode = 2
+tooltip_text = "Español"
+texture_normal = ExtResource("6_pbouo")
+stretch_mode = 0
+
+[node name="Chinese" type="TextureButton" parent="VBoxContainer/Languages"]
+layout_mode = 2
+tooltip_text = "Español"
+texture_normal = ExtResource("7_nqvln")
+stretch_mode = 0
+
+[node name="Japanese" type="TextureButton" parent="VBoxContainer/Languages"]
+layout_mode = 2
+tooltip_text = "Español"
+texture_normal = ExtResource("8_5pebq")
+stretch_mode = 0
