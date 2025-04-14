@@ -1,5 +1,5 @@
 # Copyright (c) 2025 Abraham Cuenca, Pixel Pilgrim Studios
-# See LICENSE file for full details
+# SPDX-License-Identifier: MIT
 
 @tool
 extends PopupPanel

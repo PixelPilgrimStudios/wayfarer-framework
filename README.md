@@ -138,22 +138,6 @@ reset_settings
 /scenes            → Your game scenes go here
 ```
 
-### Want to remove the Wayfarer Framework splash screen?
-
-This framework is free to use under the MIT license, but includes a required splash screen as minimal attribution.
-
-If you’d like to remove that splash for a commercial project, reach out for a no-attribution license:
-info@pixelpilgrimstudios.com
-
-One-time license pricing starts at $5.
-
-| License Type   | For Who?                                | Price   |
-|----------------|-----------------------------------------|---------|
-| Free (MIT)     | Anyone using with splash attribution    | $0      |
-| Indie License  | Solo dev or hobbyist, no attribution    | $5      |
-| Studio License | Teams with funding, unlimited use       | $35     |
-| Custom License | Companies who want white-label, support | Contact |
-
 ---
 
 ## Included Assets & Licenses
@@ -188,16 +172,6 @@ Feel free to fork, extend, and build wild new worlds with it.
 
 ---
 
-## Attribution Requirement
-
-If you publish a game or commercial project using **Wayfarer Framework**, you must include:
-
-- The default **Wayfarer Framework splash screen**
-These are integrated into the framework by design and serve as minimal credit for its creation.
-
-If you wish to remove or replace it, please reach out for a license.
-
----
 
 Licensed under the [MIT License](LICENSE)
 
