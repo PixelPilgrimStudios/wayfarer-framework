@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Wayfarer Framework"
-config/version="1.0.0"
+config/version="1.0.2"
 run/main_scene="uid://sdee1s7k23kv"
 config/features=PackedStringArray("4.4")
 boot_splash/bg_color=Color(0, 0, 0, 1)
