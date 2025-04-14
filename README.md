@@ -1,4 +1,4 @@
-# Wayfarer Framework v1.0.0
+# Wayfarer Framework v1.0.2
 
 ![Wayfarer-Framework](wayfarer-framework_gray.png)
 
